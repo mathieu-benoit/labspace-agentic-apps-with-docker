@@ -1,0 +1,13 @@
+{
+  "name": "dmr-demo",
+  "version": "1.0.0",
+  "description": "Demo of Docker Model Runner with openai libraries",
+  "main": "index.js",
+  "private": true,
+  "keywords": [],
+  "author": "",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "openai": "^5.8.3"
+  }
+}

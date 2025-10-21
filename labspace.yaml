@@ -1,11 +1,19 @@
-title: Labspace starter
+title: Agentic Compose
 description: |
-  A basic template for creating a Labspace, including all of the boilerplate needed to write and publish a Labspace.
+  Get up and going with building agentic applications with Compose.
 
 sections:
   - title: Introduction
     contentPath: .labspace/01-introduction.md
-  - title: Main Content 1
-    contentPath: .labspace/02-main-content.md
+  - title: Understanding model interactions
+    contentPath: .labspace/02-understanding-model-interactions.md
+  - title: The Docker Model Runner
+    contentPath: .labspace/03-the-docker-model-runner.md
+  - title: Understanding tools and MCP
+    contentPath: .labspace/04-understanding-tools-and-mcp.md
+  - title: The Docker MCP Gateway
+    contentPath: .labspace/05-the-docker-mcp-gateway.md
+  - title: Putting it all together
+    contentPath: .labspace/06-putting-it-all-together.md
   - title: Conclusion
-    contentPath: .labspace/03-conclusion.md
+    contentPath: .labspace/07-conclusion.md

@@ -1,0 +1,29 @@
+# Config to go here!
+models:
+  gemma3:
+    model: ai/gemma3:4B-Q4_K_M
+
+services:
+  mcp-gateway:
+    image: docker/mcp-gateway
+    command: --transport=streaming --servers=duckduckgo
+    use_api_socket: true  
+
+  app: 
+    build:
+      context: ./
+      target: dev
+    models:
+      gemma3:
+        endpoint_var: OPENAI_BASE_URL
+        model_var: OPENAI_MODEL
+    ports:
+      - 3080:3030
+    environment:
+      MCP_GATEWAY_URL: http://mcp-gateway:8811/mcp
+      OPENAI_API_KEY: "not-required"
+    develop:
+      watch:
+        - path: ./src
+          action: sync
+          target: /usr/local/app/src

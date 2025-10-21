@@ -3,19 +3,33 @@ services:
     environment:
       PROJECT_CLONE_URL: https://github.com/mikesir87/labspace-agentic-compose
 
-  # workspace:
-  #   # Override the default image if desired
-  #   # More details - https://github.com/dockersamples/labspace-infra/blob/main/docs/configuration.md#overriding-the-workspace-image
-  #   image: dockersamples/labspace-workspace-java
+  workspace:
+    ports: !override
+      - 6274:6274
+      - 6277:6277
+      - 8085:8085
+      
+    environment:
+      OPENAI_BASE_URL: http://model-runner.docker.internal/engines/v1
+      OPENAI_API_KEY: not-required
+      OPENAI_MODEL: ai/gemma3-qat
 
-  #   # Override the default ports to publish additional ports you may need
-  #   # More details - https://github.com/dockersamples/labspace-infra/blob/main/docs/configuration.md#overriding-the-workspace-ports
-  #   ports: !override
-  #     - "6274:6274" # Expose the MCP inspector users will launch from inside the Labspace
-  #     - "8080:8080" # The port used by the app
+      # Settings for the MCP Inspector and MCP Gateway
+      HOST: 0.0.0.0
+      DANGEROUSLY_OMIT_AUTH: "true"
+      MCP_AUTO_OPEN_ENABLED: "false"
+      DOCKER_MCP_IN_CONTAINER: "1"
 
-  #   # Add other environment variables as needed
-  #   environment:
-  #     DANGEROUSLY_OMIT_AUTH: "true" # Skip auth for the MCP Inspector
+  visual-chatbot:
+    image: mikesir87/visual-chatbot
+    use_api_socket: true
+    ports:
+      - 3050:3000
+    models:
+      gemma3:
+        endpoint_var: OPENAI_BASE_URL
+        model_var: OPENAI_MODEL
 
-# Add other models or services your Labspace may need
+models:
+  gemma3:
+    model: ai/gemma3:4B-Q4_K_M

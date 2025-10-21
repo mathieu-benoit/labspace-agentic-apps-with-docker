@@ -1,0 +1,14 @@
+{
+  "name": "02-tools-and-mcp",
+  "version": "1.0.0",
+  "main": "index.js",
+  "private": true,
+  "keywords": [],
+  "author": "",
+  "license": "Apache-2.0",
+  "description": "",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.20.1",
+    "openai": "^6.6.0"
+  }
+}
