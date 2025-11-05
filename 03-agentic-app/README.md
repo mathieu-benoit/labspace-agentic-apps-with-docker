@@ -31,7 +31,7 @@ The first thing we'll do is create a Compose file that defines the model and MCP
     ```yaml
     models:
       gemma3:
-        model: ai/gemma3-qat
+        model: ai/gemma3:4B-Q4_K_M
     ```
 
 3. Now, we need to add our tools. We'll use the MCP Gateway container that we used earlier. Add the following to the Compose file after the `models` config:
@@ -80,7 +80,7 @@ The first thing we'll do is create a Compose file that defines the model and MCP
     ```yaml
     models:
       gemma3:
-        model: ai/gemma3-qat
+        model: ai/gemma3:4B-Q4_K_M
 
     services:
       mcp-gateway:

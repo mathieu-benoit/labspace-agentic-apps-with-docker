@@ -39,7 +39,7 @@ The Docker Model Runner CLI commands are designed to look familiar to the other 
 2. Pull a model by using the `docker model pull` command:
 
     ```console
-    docker model pull ai/gemma3-qat
+    docker model pull ai/gemma3:4B-Q4_K_M
     ```
 
     This command should exit fairly quickly since the model was pulled when you started the lab environment.
@@ -49,24 +49,24 @@ The Docker Model Runner CLI commands are designed to look familiar to the other 
 3. To learn more details about a model, you can use the `docker model inspect` command:
 
     ```console
-    docker model inspect ai/gemma3-qat
+    docker model inspect ai/gemma3:4B-Q4_K_M
     ```
 
     Running that will give you output similar to the following:
 
     ```json
     {
-        "id": "sha256:efe9562a810a0d1422735603e841c4a455b90f7efcbdad37b50d0e29a4db4248",
+        "id": "sha256:a353a8898c9d63b83254ad34ff8f3711d94e06dd412f1278c0ff0d9af27426f2",
         "tags": [
-            "ai/gemma3-qat"
+            "ai/gemma3:4B-Q4_K_M"
         ],
-        "created": 1758528078,
+        "created": 1758368217,
         "config": {
             "format": "gguf",
             "quantization": "MOSTLY_Q4_K_M",
             "parameters": "3.88 B",
             "architecture": "gemma3",
-            "size": "2.36 GiB",
+            "size": "2.31 GiB",
             "gguf": {
                 "gemma3.attention.head_count": "8",
                 ...
@@ -80,7 +80,7 @@ The Docker Model Runner CLI commands are designed to look familiar to the other 
 4. To run a single query against the model, use the `docker model run` command:
 
     ```console
-    docker model run ai/gemma3-qat "Tell me an interesting fact"
+    docker model run ai/gemma3:4B-Q4_K_M "Tell me an interesting fact"
     ```
 
     Once the model is loaded, you'll get a response!
