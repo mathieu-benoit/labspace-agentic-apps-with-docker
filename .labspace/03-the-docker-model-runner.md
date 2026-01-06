@@ -161,7 +161,13 @@ You will now use the [openai](https://www.npmjs.com/package/openai) library to c
 
 ## 🔎 Viewing requests to Docker Model Runner
 
-Docker Desktop provides additional insights into the requests going into the Docker Model Runner.
+You can get additional insights about the requests going into the Docker Model Runner for the specific model used by running this command:
+
+```bash
+docker model requests ai/gemma3:4B-Q4_K_M | jq .
+```
+
+You can get these information with Docker Desktop as well.
 
 1. Open Docker Desktop and click the **Models** menu item.
 
