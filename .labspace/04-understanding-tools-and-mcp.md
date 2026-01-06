@@ -121,7 +121,7 @@ Now that we've seen tools, it's time to talk about MCP servers. MCP stands for _
     Are there any current weather warnings in New York City?
     ```
 
-    You should see a new message added to the stack with a tool invocation request for _weather__get-weather-warnings_.
+    In the response, you should see a "Tool execution request" for _weather__get-weather-warnings_.
 
     Again, that is up to the client to actually invoke the tool, _not the model_.
 
