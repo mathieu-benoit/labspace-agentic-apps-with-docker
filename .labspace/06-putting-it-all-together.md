@@ -40,7 +40,7 @@ The first thing you'll do is create a Compose file that defines the model and MC
       mcp-gateway:
         image: docker/mcp-gateway
         command: --transport=streaming --servers=duckduckgo
-        use_api_socket: true  
+        use_api_socket: true
     ```
 
 4. Finally, add a service for the custom app. This config will tell Docker to build a container image and connect it to the model and MCP gateway:
@@ -73,15 +73,16 @@ The first thing you'll do is create a Compose file that defines the model and MC
 
 5. Validate your Compose file looks like this:
 
-    ```yaml
+    ```yaml  save-as=03-agentic-app/compose.yaml
     models:
       gemma3:
         model: ai/gemma3:4B-Q4_K_M
+        context_size: 65000 # ~4 GB VRAM
 
     services:
       mcp-gateway:
         image: docker/mcp-gateway
-        command: --transport=streaming --servers=time
+        command: --transport=streaming --servers=duckduckgo
         use_api_socket: true
 
       app: 
@@ -108,7 +109,7 @@ The first thing you'll do is create a Compose file that defines the model and MC
 
     ```console terminal-id=3-agentic-app
     cd 03-agentic-app
-    docker compose up  --build --watch
+    docker compose up --build --watch
     ```
 
     The `--watch` flag will start Compose Watch, which will be used to sync files into the container as we make changes.
