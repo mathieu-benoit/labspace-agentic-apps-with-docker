@@ -12,7 +12,7 @@ services:
     environment:
       OPENAI_BASE_URL: http://model-runner.docker.internal/engines/v1
       OPENAI_API_KEY: not-required
-      OPENAI_MODEL: ai/gemma3-qat
+      OPENAI_MODEL: ai/gemma3:4B-Q4_K_M
 
       # Settings for the MCP Inspector and MCP Gateway
       HOST: 0.0.0.0
