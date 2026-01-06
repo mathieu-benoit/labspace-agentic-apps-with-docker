@@ -108,7 +108,7 @@ The first thing you'll do is create a Compose file that defines the model and MC
 
     ```console terminal-id=3-agentic-app
     cd 03-agentic-app
-    docker compose up --watch
+    docker compose up  --build --watch
     ```
 
     The `--watch` flag will start Compose Watch, which will be used to sync files into the container as we make changes.
