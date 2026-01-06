@@ -34,6 +34,7 @@ In your response, include a short summary of the location and event you're makin
 const openai = createOpenAI();
 
 export const jokeAgent = new Agent({
+  id: 'Joke creator',
   name: 'Joke creator',
   instructions: AGENT_PROMPT,
   model: openai("gpt-4"),

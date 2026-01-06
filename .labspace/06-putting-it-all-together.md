@@ -156,10 +156,11 @@ As you saw in the Compose file, the `OPENAI_BASE_URL`, `OPENAI_MODEL`, and `MCP_
 
     ```javascript
     export const jokeAgent = new Agent({
-      name: 'Joke creator',
+      id: 'Joke creator',
+      name: "Joke creator",
       instructions: AGENT_PROMPT,
-      model: openai(process.env.OPENAI_MODEL || "gpt-4"),
-      tools: await mcp.getTools(),
+      model: openai.chat(process.env.OPENAI_MODEL || "gpt-4"),
+      tools: await mcp.listTools(),
     });
     ```
 
