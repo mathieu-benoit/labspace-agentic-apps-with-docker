@@ -1,6 +1,6 @@
 metadata:
-  id: dockersamples/labspace-agentic-compose
-  sourceRepo: github.com/dockersamples/labspace-agentic-compose
+  id: dockersamples/labspace-agentic-apps-with-docker
+  sourceRepo: github.com/dockersamples/labspace-agentic-apps-with-docker
   contentVersion: abcd123 # To be replaced at publish time
 
 title: Building Agentic Apps with Docker
