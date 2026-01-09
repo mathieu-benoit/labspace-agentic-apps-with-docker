@@ -1,3 +1,8 @@
+metadata:
+  id: dockersamples/labspace-agentic-compose
+  sourceRepo: github.com/dockersamples/labspace-agentic-compose
+  contentVersion: abcd123 # To be replaced at publish time
+
 title: Building Agentic Apps with Docker
 description: |
   Get up and going with building agentic applications with Compose, Docker Model Runner, and the Docker MCP Gateway.
