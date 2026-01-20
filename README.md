@@ -33,7 +33,7 @@ docker compose -f oci://dockersamples/labspace-agentic-apps-with-docker up -d
 
 With Docker Engine:
 ```bash
-docker compose -f oci://dockersamples/labspace-agentic-apps-with-docker -f dce-override.compose.yaml up -d
+docker compose -f oci://dockersamples/labspace-agentic-apps-with-docker -f https://github.com/dockersamples/labspace-agentic-apps-with-docker.git#main:dce-override.compose.yaml up -d
 ```
 
 Note that it may take a little while to start due to the AI model used by the Labspace.
