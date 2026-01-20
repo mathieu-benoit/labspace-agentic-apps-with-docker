@@ -26,8 +26,14 @@ This Labspace will teach you the following:
 
 To launch the Labspace, run the following command:
 
+With Docker Desktop:
 ```bash
 docker compose -f oci://dockersamples/labspace-agentic-apps-with-docker up -d
+```
+
+With Docker Engine:
+```bash
+docker compose -f oci://dockersamples/labspace-agentic-apps-with-docker -f dce-override.compose.yaml up -d
 ```
 
 Note that it may take a little while to start due to the AI model used by the Labspace.
