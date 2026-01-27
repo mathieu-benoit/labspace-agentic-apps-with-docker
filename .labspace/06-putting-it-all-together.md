@@ -105,6 +105,13 @@ The first thing you'll do is create a Compose file that defines the model and MC
               target: /usr/local/app/src
     ```
 
+If you are running this labspace on Docker Engine (without Docker Desktop), you will need to add this below in the `services.app` entry:
+
+    ```yaml
+        extra_hosts:
+          - "model-runner.docker.internal:host-gateway"
+    ```
+
 6. Now, start the stack by running `docker compose up --watch`:
 
     ```console terminal-id=3-agentic-app
@@ -165,14 +172,14 @@ As you saw in the Compose file, the `OPENAI_BASE_URL`, `OPENAI_MODEL`, and `MCP_
     });
     ```
 
-5. Go back to :fileLink[http://localhost:3080]{href="http://localhost:3080" title="Agentic app"} and give it a try now!
+5. Go back to :tabLink[http://localhost:3080]{href="http://localhost:3080" title="Agentic app"} and give it a try now!
 
     The app should work! You should see a new joke get generated and the MCP Gateway executions in the log output.
 
 If you'd like, feel free to make changes to the agent's prompt to change how it operates.
 
 > [!IMPORTANT]
-> One incredible feature of the Mastra framework is the Mastra playground. With this playground, you can interact with the agent directly, test prompts, make changes, and more. Access it in this lab by going to [http://localhost:4111](http://localhost:4111).
+> One incredible feature of the Mastra framework is the Mastra playground. With this playground, you can interact with the agent directly, test prompts, make changes, and more. Access it in this lab by going to :tabLink[http://localhost:4111]{href="http://localhost:4111" title="Mastra playground"}.
 
 
 ## Cleaning up

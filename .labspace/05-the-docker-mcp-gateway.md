@@ -93,7 +93,11 @@ In this section, you're going to use the Docker MCP Gateway to launch the [DuckD
 
     You should see both a _fetch_content_ and a _search_ tool in the list.
 
-8. Select the _fetch_content_ tool and enter a _url_ of `https://www.docker.com`. 
+8. Select the _fetch_content_ tool and enter a _url_ of:
+
+    ```plaintext
+    https://www.docker.com
+    ```
 
 9. Click the **Run Tool** button and see the tool run to get the page contents!
 

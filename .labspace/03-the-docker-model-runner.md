@@ -54,7 +54,7 @@ The Docker Model Runner CLI commands are designed to look familiar to the other 
 
     Running that will give you output similar to the following:
 
-    ```json
+    ```json no-copy-button
     {
         "id": "sha256:a353a8898c9d63b83254ad34ff8f3711d94e06dd412f1278c0ff0d9af27426f2",
         "tags": [
