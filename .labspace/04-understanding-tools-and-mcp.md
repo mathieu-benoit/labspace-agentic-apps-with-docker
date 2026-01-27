@@ -19,7 +19,7 @@ When the Chat Completions request is sent to the model, a collection of `tools` 
 
 The following is an example of a description of a tool that can provide the current time:
 
-```json
+```json no-copy-button
 {
     "tools": [
     {
