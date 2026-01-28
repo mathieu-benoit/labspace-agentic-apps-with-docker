@@ -74,7 +74,7 @@ The first thing you'll do is create a Compose file that defines the model and MC
 
 5. Validate your Compose file looks like this:
 
-    ```yaml  save-as=03-agentic-app/compose.yaml
+    ```yaml save-as=03-agentic-app/compose.yaml
     models:
       gemma3:
         model: ai/gemma3:4B-Q4_K_M
@@ -107,7 +107,7 @@ The first thing you'll do is create a Compose file that defines the model and MC
               target: /usr/local/app/src
     ```
 
-If you are running this labspace on Docker Engine (without Docker Desktop), you will need to add this below in the `services.app` entry:
+    If you are running this labspace on Docker Engine (without Docker Desktop), you will need to add this below in the `services.app` entry:
 
     ```yaml
         extra_hosts:
