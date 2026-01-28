@@ -57,6 +57,7 @@ The first thing you'll do is create a Compose file that defines the model and MC
             model_var: OPENAI_MODEL
         ports:
           - 3080:3030
+          - 4111:4111
         environment:
           MCP_GATEWAY_URL: http://mcp-gateway:8811/mcp
           OPENAI_API_KEY: "not-required"
@@ -95,6 +96,7 @@ The first thing you'll do is create a Compose file that defines the model and MC
             model_var: OPENAI_MODEL
         ports:
           - 3080:3030
+          - 4111:4111
         environment:
           MCP_GATEWAY_URL: http://mcp-gateway:8811/mcp
           OPENAI_API_KEY: "not-required"
@@ -179,7 +181,7 @@ As you saw in the Compose file, the `OPENAI_BASE_URL`, `OPENAI_MODEL`, and `MCP_
 If you'd like, feel free to make changes to the agent's prompt to change how it operates.
 
 > [!IMPORTANT]
-> One incredible feature of the Mastra framework is the Mastra playground. With this playground, you can interact with the agent directly, test prompts, make changes, and more. Access it in this lab by going to :tabLink[http://localhost:4111]{href="http://localhost:4111" title="Mastra playground"}.
+> One incredible feature of the Mastra framework is the Mastra Studio. With this Studio, you can interact with the agent directly, test prompts, make changes, and more. Access it in this lab by going to :tabLink[http://localhost:4111]{href="http://localhost:4111" title="Mastra Studio"}.
 
 
 ## Cleaning up
